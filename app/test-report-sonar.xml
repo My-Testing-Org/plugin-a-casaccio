@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="/Users/andrearinaldi/projects/chatbot/plugin-a-casaccio/app/test/application/app.test.js">
+        <testCase name="App Status API answers properly" duration="154"/>
+    </file>
+    <file path="/Users/andrearinaldi/projects/chatbot/plugin-a-casaccio/app/test/routes/actions/example/exampleRoute.test.js">
+        <testCase name="Example - Swagger OpenApi tests Example - loads correctly" duration="26"/>
+        <testCase name="Example - Querystring validation Example - answers 200 with correct qs" duration="136"/>
+        <testCase name="Example - Querystring validation Example - answers 400 with invalid querystring" duration="35"/>
+    </file>
+</testExecutions>

@@ -1,0 +1,57 @@
+{
+  "name": "plugin-a-casaccio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run jest",
+    "lint": "eslint src/. test/. --config .eslintrc.json --fix --max-warnings=10",
+    "jest": "jest --detectOpenHandles --watchAll",
+    "jest:ci": "jest --forceExit --ci --testResultsProcessor=jest-multiple-result-processors --coverage=true",
+    "start": "node src/index.js | pino-applicationinsights --key 77033849-96c5-4331-9f8c-3c6400bcd843",
+    "dev": "PORT=3100 node src/index.js",
+    "debug": "PORT=3100 node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.0.0",
+    "fastify-autoload": "^3.0.2",
+    "fastify-cors": "^5.0.0",
+    "fastify-error": "^0.2.0",
+    "fastify-plugin": "^3.0.0",
+    "node-fetch": "^2.6.1",
+    "pino-applicationinsights": "^2.1.0",
+    "responsa-plugin-core-js": "git+https://github.com/responsaeuris/responsa-plugin-core-js-dev.git#develop"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.2.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "jest": "^26.6.3",
+    "jest-extended": "^0.11.5",
+    "jest-junit-reporter": "^1.1.0",
+    "jest-multiple-result-processors": "^0.0.3",
+    "jest-sonar-reporter": "^2.0.0",
+    "prettier": "^2.2.1"
+  },
+  "jestTestResultProcessors": [
+    "jest-junit-reporter",
+    "jest-sonar-reporter"
+  ],
+  "jestSonar": {
+    "reportPath": ".",
+    "reportFile": "test-report-sonar.xml",
+    "indent": 4
+  }
+}
